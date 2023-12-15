@@ -18,7 +18,7 @@ set_target_properties(calculator_lib PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${LIB_P
 add_executable(calculator ${SOURCE_FILES})
 
 # Вказуємо шлях до бібліотеки
-target_link_libraries(calculator PRIVATE ${LIB_PATH})
+target_link_libraries(calculator PRIVATE calculator_lib)
 
 # Генерація файла rules.ninja та build.ninja для системи збирання Ninja
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
